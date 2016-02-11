@@ -1,0 +1,12 @@
+<%= form_for(@url) do |f| %>
+  <div class="field">
+    <%= f.label :original %>
+    <%= f.text_field :original %>
+  </div>
+  <div class="field">
+  <%= f.hidden_field :short, value: @short%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
