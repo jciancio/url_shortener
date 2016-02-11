@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :urls
 
+  root 'urls#new'
+
   get ':id' => 'urls#show'
 
   get 'alt/:short' => 'urls#show_alt'
