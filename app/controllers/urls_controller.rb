@@ -2,6 +2,7 @@ class UrlsController < ApplicationController
   before_action :set_url, only: [:show, :edit, :update, :destroy]
   before_action :set_url_alt, only: :show_alt
   before_action :create_short, only: :new
+  validates :short, uniqueness: true
 
   def index
     @urls = Url.all
